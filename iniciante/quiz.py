@@ -5,13 +5,13 @@ opc = 0
 historia = 0
 literatura = 0
 biologia = 0
-geografia = 0
-fisica = 0
+
 nota_h = fim_h = 0
 nota_l = fim_l = 0
+nota_b = fim_b = 0
 
-while opc != 6:
-     print(" [1]HISTÓRIA \n [2]LITERATURA \n [3]BIOLOGIA \n [4]GEOGRAFIA \n [5]FISICA \n [6]SAIR DA LISTA")
+while opc != 4:
+     print(" [1]HISTÓRIA \n [2]LITERATURA \n [3]BIOLOGIA \n [4]SAIR DA LISTA")
      print("-"*30)
      opc = int(input("Escolha a sua área: "))
      print("-"*30)
@@ -19,12 +19,21 @@ while opc != 6:
          while opc == 1 :
              print("voce ja respondeu esse quiz , tente novamente")
              opc = int(input("Escolha a sua área: "))
+             fim_h = 1
              print("-"*30)     
      if fim_l == 1 :
          while opc == 2 :
              print("voce ja respondeu esse quiz , tente novamente")
              opc = int(input("Escolha a sua área: "))
+             fim_l = 1
+             print("-"*30)  
+     if fim_b == 1 :
+         while opc == 2 :
+             print("voce ja respondeu esse quiz , tente novamente")
+             opc = int(input("Escolha a sua área: "))
+             fim_b = 1
              print("-"*30)         
+       
 
      match opc:
          case 1:
@@ -114,4 +123,54 @@ while opc != 6:
              print("-"*30) 
              print("VOCE FINALIZOU O QUIZ DE LITERATURA")
              fim_l = 1
-             print("-"*30)          
+             print("-"*30)
+         case 3:
+             print("O que é a fotossíntese? \n [1]Produção de alimentos pela célula \n [2]Conversão de luz solar em energia química \n [3]Processamento de oxigênio na célula \n [4]Divisão celular")
+             resp1 = int(input("resposta = "))
+             if resp1 == 2:
+                 print("correto!")
+                 nota_b = nota_b + 1
+             else :
+                 print("incorreto")
+             print("-"*30) 
+             print("Onde ocorre a respiração celular nas células eucariotas? \n [1]Núcleo \n [2]Ribossomos \n [3]Mitocôndrias \n [4]Cloroplastos")
+             resp1 = int(input("resposta = "))
+             if resp1 == 3:
+                 print("correto!")
+                 nota_b = nota_b + 1
+             else :
+                 print("incorreto")
+             print("-"*30) 
+             print("O que é um cromossomo? \n [1]Estrutura que armazena o oxigênio \n [2]Estrutura que transporta nutrientes \n [3]Estrutura de DNA que carrega a informação genética \n [4]Parte do sistema imunológico")
+             resp1 = int(input("resposta = "))
+             if resp1 == 3:
+                 print("correto!")
+                 nota_b = nota_b + 1
+             else :
+                 print("incorreto")
+             print("-"*30) 
+             print("Qual é a função dos glóbulos vermelhos? \n [1]Combater infecções \n [2]Transportar oxigênio \n [3]Produzir hormônios \n [4]Formar a pele")
+             resp1 = int(input("resposta = "))
+             if resp1 == 2:
+                 print("correto!")
+                 nota_b = nota_b + 1
+             else :
+                 print("incorreto")
+             print("-"*30) 
+             print("O que é uma célula procariota? \n [1]Célula com núcleo definido \n [2]Célula sem núcleo definido \n [3]Célula que realiza fotossíntese \n [4]Célula que realiza a respiração celular")
+             resp1 = int(input("resposta = "))
+             if resp1 == 2:
+                 print("correto!")
+                 nota_b = nota_b + 1
+             else :
+                 print("incorreto")
+             print("-"*30) 
+             print("VOCE FINALIZOU O QUIZ DE BIOLOGIA")
+             fim_b = 1
+             print("-"*30)
+print("VOCE FINALIZOU O QUIZ")
+print("Agora vamos ver os seus pontos em cada area...")
+print("-"*30)
+print(f"historia = {nota_h}")
+print(f"literatura = {nota_l}")
+print(f"biologia = {nota_b}")
