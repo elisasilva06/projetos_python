@@ -20,7 +20,7 @@ print("-="*10)
 print("vamos começar ...")
 tentativas = 0
 while True:
-    resposta = input("Adivinhe o número")
+    resposta = input("Adivinhe o número: ")
     tentativas = tentativas + 1
     if resposta.isdigit():
         resposta = int(resposta)
